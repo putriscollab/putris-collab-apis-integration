@@ -8,14 +8,8 @@ import {api} from '../services/api'
 export default function GSignInButton(){
 
   async function responseGoogle(googleRes){
-    // const user = {
 
-    //   googleId	  : googleRes.profileObj.googleId,
-    //   imageUrl	  : googleRes.profileObj.imageUrl,
-    //   email	      : googleRes.profileObj.email,
-    //   name	      : googleRes.profileObj.givenName + " " + googleRes.profileObj.familyName,
-    //   screenName  : googleRes.profileObj.givenName,
-    // }
+    console.log(googleRes)
 
     const { googleId, imageUrl, email } =  googleRes.profileObj
 
@@ -36,7 +30,7 @@ export default function GSignInButton(){
 
   if(localStorage.getItem('user')){
     return(
-      <p>{localStorage.getItem('user')}</p>
+      <p>Logged</p>
     )
     
   }else{
