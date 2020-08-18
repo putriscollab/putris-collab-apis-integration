@@ -42,12 +42,9 @@ export default function ContentList(){
          {contentList.map( content => (
           <li key={content._id} style={{border: "solid 1px black"}}>
 
-      
+          <img src={content.imageUrl} />
           <p><b>content._id</b></p> 
           <p>{content._id}</p>
-
-          <p><b>content.playslist</b></p> 
-          <p>{content.playslist}</p>
           
           <p><b>content.playslist</b></p> 
           <p>{content.playslist}</p>
@@ -72,6 +69,8 @@ export default function ContentList(){
           
           <p><b>content.dateCreated</b></p> 
           <p>{content.dateCreated}</p>
+
+          <a target="_blank" href={`https://www.youtube.com/watch?v=${content.ytID}`}>Link</a>
 
             </li>
          ))}

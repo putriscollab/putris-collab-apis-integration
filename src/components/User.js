@@ -20,6 +20,7 @@ export default function User(){
     
         setUSerData(response.data)
   
+        // window.location.reload(false)
       }
 
     }
